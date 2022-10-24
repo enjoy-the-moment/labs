@@ -1,7 +1,19 @@
+// задана перша множина
 const fr = [1, 2, 3, 4, 5];
-const sc = ['a', 'b', 'c', 'd', 'f'];
-const u = [1, 'b', 2, 'c', 3, 'd', 4, 'f', 5, 'a'];
+// задана друга множина
+const sc = [1, 9, 4, 25, 16];
+// задане відображення
+const u = [1, 2, 2, 9, 3, 4, 4, 25, 5, 16];
 let p = 0;
+
+for(let coeff1 = 0; coeff1 < fr.length; coeff1++) {
+    for(let coeff2 = 0; coeff2 < sc.length; coeff2++) {
+        if (fr[coeff1] ** 2 === sc[coeff2]) {
+            // тут задається умова для відображення, в даному випадку це квадрат
+            console.log('Елемент 1ї множини: ', fr[coeff1], 'є відображенням елемента 2ї множини: ', sc[coeff2]);
+        }
+    }
+}
 
 for (let i = 0; i < fr.length; i++) {
   if (u[p] === fr[i] && (u[p + 1] === sc[i] || u[p + 1] === sc[i + 1])) {
