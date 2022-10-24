@@ -4,7 +4,6 @@ const fr = [1, 2, 3, 4, 5];
 const sc = [1, 9, 4, 25, 16];
 // задане відображення
 const u = [1, 2, 2, 9, 3, 4, 4, 25, 5, 16];
-let p = 0;
 
 for(let coeff1 = 0; coeff1 < fr.length; coeff1++) {
     for(let coeff2 = 0; coeff2 < sc.length; coeff2++) {
@@ -13,18 +12,4 @@ for(let coeff1 = 0; coeff1 < fr.length; coeff1++) {
             console.log('Елемент 1ї множини: ', fr[coeff1], 'є відображенням елемента 2ї множини: ', sc[coeff2]);
         }
     }
-}
-
-for (let i = 0; i < fr.length; i++) {
-  if (u[p] === fr[i] && (u[p + 1] === sc[i] || u[p + 1] === sc[i + 1])) {
-    console.log(u[p], "відноситься до", u[p + 1]);
-    p += 2;
-  } else if (u[p] === fr[fr.length - 1] && u[p + 1] === sc[0]) {
-    console.log(u[p], "відноситься до", sc[0]);
-  } else if (u[p] === fr[i] && (u[p + 1] !== sc[i] || u[p + 1] !== sc[i + 1])) {
-    console.log('Відображення задано не вірно, елемент з першої множини не має відображення в другій або має невірне відображення');
-  } else {
-    console.log('Помилка! Один елемент з першої множини, а саме: ' + u[p] + ', може мати тільки одне відображення в другій')
-    break;
-  }
 }
