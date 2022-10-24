@@ -5,6 +5,7 @@ const sc = [1, 9, 4, 25, 16];
 // задане відображення
 const u = [1, 2, 2, 9, 3, 4, 4, 25, 5, 16];
 
+console.log('Функція для даного відображення: y = x²');
 for(let coeff1 = 0; coeff1 < fr.length; coeff1++) {
     for(let coeff2 = 0; coeff2 < sc.length; coeff2++) {
         if (fr[coeff1] ** 2 === sc[coeff2]) {
