@@ -17,3 +17,15 @@ def colour_vertices(graph):
         break
 
   return colour_graph
+
+
+
+
+graph = { "a" : ["c", "d", "b"],
+          "b" : ["c", "e", "a"],
+          "c" : ["a", "b"],
+          "d" : ["a","e"],
+          "e" : ["d", "b"],
+         }
+result = (colour_vertices(graph))
+print(result)
